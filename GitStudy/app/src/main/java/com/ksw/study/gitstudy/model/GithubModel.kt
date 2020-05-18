@@ -5,23 +5,28 @@ import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 data class GithubRepo(
+    @SerializedName("name")
     val name: String,
+    @SerializedName("description")
     val desc: String,
+    @SerializedName("created_at")
     val created: String
 )
 
 @Parcelize
 data class GithubUser(
+    @SerializedName("login")
+    val id: String,
     @SerializedName("name")
     val name: String,
     @SerializedName("avatar_url")
     val avatar: String,
     @SerializedName("location")
-    val location: String,
+    var location: String?,
     @SerializedName("company")
-    val company: String,
+    var company: String?,
     @SerializedName("email")
-    val email: String,
+    var email: String?,
     @SerializedName("bio")
-    val bio: String
+    var bio: String?
 ): Parcelable

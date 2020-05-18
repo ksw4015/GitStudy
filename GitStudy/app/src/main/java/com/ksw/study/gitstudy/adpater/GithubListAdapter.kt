@@ -37,8 +37,10 @@ class GithubListAdapter(val mContext: Context): RecyclerView.Adapter<GithubListA
         holder.bindItem(mList[position])
     }
 
-    private fun setRepo(list: List<GithubRepo>) {
-        mList = list
+    fun setRepo(list: List<GithubRepo>?) {
+        if(list != null)
+            mList = list
+        notifyDataSetChanged()
     }
 
 }
