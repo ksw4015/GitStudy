@@ -27,13 +27,4 @@ public class BinarySearch {
         return -1;
     }
 
-    /*
-     연습문제
-     찾는 요소값이 여러개일 경우 가장 앞의 인덱스값을 반환하도록 구현
-     */
-    public static int binarySearchX(int[] a, int key) {
-        int result = -1;
-        return result;
-    }
-
 }
