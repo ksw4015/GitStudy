@@ -19,7 +19,6 @@ public class BubbleSort {
                     int temp = arr[i];
                     arr[i] = arr[i+1];
                     arr[i+1] = temp;
-                    swap = true;   // 한 번의 반복에서 값이 교환된 적이있으면 true (while문 반복)
                     continue;
                 }
                 swap = false;  // 정렬이 끝났으면 false (while문 종료)
