@@ -22,11 +22,7 @@ public class QuickSort {
         do{
             while (arr[pl] < pivot) pl++;   // Pivot값 보다 큰 값이 나올 때까지 인덱스 증가
             while (arr[pr] > pivot) pr--;   // Pivot값 보다 작은 값이 나올 때까지 인덱스 감소
-            // 인덱스 값이 서로 교차되지 않았으면 값을 교환
-            if(pl <= pr) {
-                // 값 교환 후 다시 인덱스 증가 및 감소
-                swap(arr, pl++, pr--);
-            }
+            swap(arr, pl++, pr--);   // 해당 되는 값끼리 교환 후 인덱스 증가,감소
         } while (pl <= pr);
 
         if(left < pr) quickSort(arr, left, pr);
